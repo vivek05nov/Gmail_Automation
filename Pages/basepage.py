@@ -1,3 +1,4 @@
+from selenium.common import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -26,5 +27,12 @@ class Base:
     def do_get_title(self, title):
         WebDriverWait(self.driver, 10).until(EC.title_is(title))
         return self.driver.title
+
+    def get_element(self, by_locator):
+        try:
+            element = self.driver.find_element(*by_locator)
+            return True
+        except NoSuchElementException:
+            return False
 
 

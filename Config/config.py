@@ -6,6 +6,9 @@ class TestData:
     SUBJECT= "Incubyte Deliverables:1"
     BODY ="Automation QA Test for Incubyte"
 
+    CC = "Vivek05nov@gmail.com,developer0511@gmail.com"
+    BCC= "Vivek05nov@gmail.com,developer0511@gmail.com"
+
 
 
 
