@@ -46,3 +46,8 @@ class Compose(Base):
     def get_account_check(self):
         return self.get_element(self.ACCOUNT)
 
+    def compose_email(self, to, subject, body):
+        self.do_click(self.Compose_button)
+        self.do_send_keys(self.Send_to, to)
+        self.do_send_keys(self.Subject_box, subject)
+        self.do_send_keys(self.Message_body, body)
